@@ -1,0 +1,43 @@
+<div class="row" style="background-image: url(https://media.istockphoto.com/id/893203344/photo/fresh-food-ingredients-for-italian-cuisine.jpg?s=2048x2048&w=is&k=20&c=7v6oCXEoacvoh23F_JlWepHeDoe413P5-JUI9-w1kj0=);">
+    <div class="col-6" style="margin-left: 30%;">
+        <form class="w-75 p-5 m-5 card shadow" (ngSubmit)="login()">
+            <h2 class="text-center mb-3"><b>Login Here...</b></h2>
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form2Example1" class="form-control" [(ngModel)]="stud_email" name="stud_email" #studEmail="ngModel"/>
+              <label class="form-label" for="form2Example1">Email address</label>
+
+            </div>
+          
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="password" id="form2Example2" class="form-control" [(ngModel)]="stud_pswd" name="stud_pswd"/>
+              <label class="form-label" for="form2Example2">Password</label>
+            </div>
+          
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+                  <label class="form-check-label" for="form2Example34"> Remember me </label>
+                </div>
+              </div>
+          
+              <div class="col">
+                <!-- Simple link -->
+                <a href="#!">Forgot password?</a>
+              </div>
+            </div>
+          
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+            <div class="text-center">
+                <a routerLink="/register">New to Here?Register Now!!!</a>
+             </div>  
+            
+          </form>
+    </div>
+
+</div>

@@ -1,0 +1,49 @@
+<div class="row" style="background-image: url(https://media.istockphoto.com/id/925072202/photo/easter-baking-ingredients.jpg?s=2048x2048&w=is&k=20&c=dUPapQdc-9vG4wGkR6mq_Wdu1dW5I9lSDzNtzeufkpU=);">
+    <div class="col-6" style="margin-left: 40%;">
+        <form class="w-75 p-5 m-5 card shadow" (ngSubmit)="register()">
+            <h2 class="text-center mb-3"><b>Register Here...</b></h2>
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form3Example1" class="form-control" [(ngModel)]="stud_firstname"  name="stud_firstname"/>
+                  <label class="form-label" for="form3Example1">First name</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form3Example2" class="form-control" [(ngModel)]="stud_lastname" name="stud_lastname"/>
+                  <label class="form-label" for="form3Example2" >Last name</label>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form3Example3" class="form-control" [(ngModel)]="stud_email" name="stud_email" />
+              <label class="form-label" for="form3Example3" >Email address</label>
+            </div>
+          
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="password" id="form3Example4" class="form-control" [(ngModel)]="stud_pswd" name="stud_pswd"/>
+              <label class="form-label" for="form3Example4" >Password</label>
+            </div>
+          
+            <!-- Checkbox -->
+            <div class="form-check d-flex justify-content-center mb-4">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+              <label class="form-check-label" for="form2Example33">
+                Subscribe to our newsletter
+              </label>
+            </div>
+          
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+             <div class="text-center">
+                <a routerLink="/login">Already Register?Please Login!!!</a>
+             </div>          
+          </form>
+    </div>
+
+</div>

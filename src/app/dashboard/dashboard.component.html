@@ -1,0 +1,26 @@
+<div>
+    <div class="row">
+        <div class="col-3 p-3" style="background-color: blanchedalmond;height:850px;">
+            <div class="text-center">
+                <img src="https://media1.giphy.com/media/fVJQI5OvlOvnTiFcJQ/source.gif" routerLink="/users" alt="" style="width: 300px;height: 200px;">
+                <label><b><h3 class="ms-2">Pick Your Recipies</h3></b></label>
+            </div>
+            
+            <div class="mt-3">
+                <i class="fa-solid fa-plus fs-4" routerLink="/users/add"></i>
+                <label><b><h3 class="ms-2">Add New Recipes</h3></b></label>
+            </div>
+            <!-- <div class="mt-3">
+                <i class="fa-solid fa-star"></i>
+                <label><b><h3 class="ms-2" routerLink="/users/favourite">Add Favourite Recipes</h3></b></label>
+            </div>   -->
+            <div class="mt-3">
+                <app-calender></app-calender>
+            </div>  
+        </div>
+        <div class="col-8">
+        <p style="margin-left: 55%;"><b>Logged At:{{adminLoggedStatus | date:'fullDate'}}</b></p>
+         <img src="https://img.freepik.com/free-psd/super-breakfast-restaurant-banner-template_23-2148429140.jpg?t=st=1711717617~exp=1711721217~hmac=df34a581c1171c7ab5366e1ab04984970157baae218a73a7372178100fa61bad&w=1380" alt="" width="120%" height="800px">
+        </div>
+    </div>
+</div>

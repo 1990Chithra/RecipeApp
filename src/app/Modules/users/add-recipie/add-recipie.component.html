@@ -1,0 +1,45 @@
+<div class="row">
+  <h2 class="text-center m-3 p-3">Add New Recipies</h2>
+        <div class="col-6" style="margin-left:25%;">
+            <form class="card w-100 p-5 m-5 card shadow" (ngSubmit)="addRecipie()" #addRecipieForm="ngForm">
+              
+                <!-- Name input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form4Example6" placeholder="Enter Imageurl" class="form-control" [(ngModel)]="user.image" name="image" #image="ngModel"/>
+                  <div *ngIf="image.invalid && image.touched" class="text-danger fw-bolder">*Invalid Image</div>
+                </div>
+                
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form4Example1" placeholder="Enter Id" class="form-control" [(ngModel)]="user.id" name="id" #id="ngModel" required="" pattern="[0-9]*"/>
+                  <div *ngIf="id.invalid && id.touched" class="text-danger fw-bolder">*Invalid Id</div>
+                </div>
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form4Example2" placeholder="Enter RecipieName" class="form-control" [(ngModel)]="user.name" name="name" #name="ngModel"/>
+                  <div *ngIf="name.invalid && name.touched" class="text-danger fw-bolder">*Invalid Name</div>
+
+                </div>
+              
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form4Example3" placeholder="Enter Meal-type" class="form-control" [(ngModel)]="user.mealType" name="mealType" #mealType="ngModel"/>
+                  <div *ngIf="mealType.invalid && mealType.touched" class="text-danger fw-bolder">*Invalid Meal-Type</div>
+                </div>
+              
+                <!-- Message input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <textarea class="form-control" placeholder="Enter Ingredients" id="form4Example4" rows="4" [(ngModel)]="user.ingredients" name="ingredients" #ingredients="ngModel"></textarea>
+                  <div *ngIf="ingredients.invalid && ingredients.touched" class="text-danger fw-bolder">*Invalid Ingredients</div>
+                </div>
+                <!-- Message input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <textarea class="form-control" placeholder="Enter Instructions" id="form4Example5" rows="4" [(ngModel)]="user.instructions" name="instructions" #instructions="ngModel"></textarea>
+                    <div *ngIf="instructions.invalid && instructions.touched" class="text-danger fw-bolder">*Invalid Instructions</div>
+                </div>
+                
+
+                <!-- Submit button -->
+                <div class="text-center">
+                    <button  [disabled]="addRecipieForm.invalid" data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Add</button>
+                </div>
+            </form>
+        </div>
+</div>
